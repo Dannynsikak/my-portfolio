@@ -1,15 +1,33 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import Homescreen from "./screens/Homescreen";
+import Projectscreen from "./screens/Projectscreen";
+import NotFound from "./components/NotFound";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Homescreen />}>
+      <Route path="/projects" element={<Projectscreen />} />
+      <Route path="/*" element={<NotFound />} />
+      {/* ... etc. */}
+    </Route>
+  )
+);
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
