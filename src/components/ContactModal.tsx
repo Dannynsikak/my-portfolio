@@ -83,6 +83,13 @@ const ContactModal: React.FC<ContactModalProps> = ({ show, handleClose }) => {
             <Button variant="primary" type="submit" disabled={loading}>
               {loading ? "Sending..." : "Send Message"}
             </Button>
+            <span>
+              Prefer a direct approach?{" "}
+              <a href="mailto:nsikakdanny11@gmail.com">
+                Email me directly on Gmail
+              </a>
+              for a fster response.
+            </span>
           </Form>
         </Modal.Body>
       </Modal>

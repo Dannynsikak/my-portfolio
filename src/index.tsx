@@ -8,7 +8,6 @@ import Homescreen from "./screens/Homescreen";
 import Projectscreen from "./screens/Projectscreen";
 import NotFound from "./components/NotFound";
 import SkillsScreen from "./screens/SkillsScreen";
-import ContactModal from "./components/ContactModal";
 
 // Define the router without nesting paths unnecessarily
 const router = createBrowserRouter([
@@ -27,10 +26,6 @@ const router = createBrowserRouter([
   {
     path: "/portfolio",
     element: <SkillsScreen />,
-  },
-  {
-    path: "/contact",
-    element: <ContactModal />,
   },
 ]);
 
