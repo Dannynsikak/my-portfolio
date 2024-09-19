@@ -1,26 +1,38 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import Homescreen from "./screens/Homescreen";
 import Projectscreen from "./screens/Projectscreen";
 import NotFound from "./components/NotFound";
+import SkillsScreen from "./screens/SkillsScreen";
+import ContactModal from "./components/ContactModal";
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<Homescreen />}>
-      <Route path="/projects" element={<Projectscreen />} />
-      <Route path="/*" element={<NotFound />} />
-      {/* ... etc. */}
-    </Route>
-  )
-);
+// Define the router without nesting paths unnecessarily
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Homescreen />,
+  },
+  {
+    path: "/projects",
+    element: <Projectscreen />,
+  },
+  {
+    path: "*", // Wildcard for non-existent routes
+    element: <NotFound />,
+  },
+  {
+    path: "/portfolio",
+    element: <SkillsScreen />,
+  },
+  {
+    path: "/contact",
+    element: <ContactModal />,
+  },
+]);
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
