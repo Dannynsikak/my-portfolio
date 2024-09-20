@@ -1,7 +1,12 @@
 import React from "react";
+import Skills from "../components/Skillstest";
 
 const Projectscreen = () => {
-  return <div>This is the project screen</div>;
+  return (
+    <div>
+      <Skills />{" "}
+    </div>
+  );
 };
 
 export default Projectscreen;
