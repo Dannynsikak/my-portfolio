@@ -8,18 +8,18 @@ import { FaGithub } from "react-icons/fa";
 import { FcAbout } from "react-icons/fc";
 import { GrDocumentCsv } from "react-icons/gr";
 import { MdOutlineContactMail } from "react-icons/md";
-import { Frame1 } from "../imgs";
+import ThreeLogo from "./ThreeLogo";
 
 const navbar = () => {
   return (
     <Navbar fixed="top" expand="lg" className="bg-light shadow">
       <Container>
         <Navbar.Brand as={Link} to={"/"}>
-          <img
-            src={Frame1}
-            alt="brand logo"
-            className="inline-block max-w-[50px] h-auto"
-          />
+          <div className="row justify-content-center">
+            <div className="">
+              <ThreeLogo />
+            </div>
+          </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
