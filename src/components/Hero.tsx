@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion"; // Import framer-motion for animations
-import { Link } from "react-router-dom";
 import ContactModal from "./ContactModal";
 
 const Hero = () => {
@@ -16,13 +15,13 @@ const Hero = () => {
     const currentHeroRef = heroRef.current;
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
+        for (const entry of entries) {
           if (entry.isIntersecting) {
             setIsInView(true);
           } else {
             setIsInView(false);
           }
-        });
+        }
       },
       { threshold: 0.5 } // 30% of the Hero component must be visible to trigger animation
     );
@@ -84,7 +83,7 @@ const Hero = () => {
       <motion.div
         className="mt-10"
         animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 2 }}
+        transition={{ repeat: Number.POSITIVE_INFINITY, duration: 2 }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
