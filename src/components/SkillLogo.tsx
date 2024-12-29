@@ -53,7 +53,12 @@ const SkillLogo: React.FC<SkillLogoProps> = ({ image }) => {
     };
   }, [image]);
 
-  return <div ref={mountRef} className="w-[200px] h-[200px]" />;
+  return (
+    <div
+      ref={mountRef}
+      className="w-[200px] h-[200px] flex-col md:flex md:*:flex-1"
+    />
+  );
 };
 
 export default SkillLogo;

@@ -1,4 +1,4 @@
-import React from "react";
+import type React from "react";
 import { FaReact } from "react-icons/fa";
 import { TbBrandTypescript } from "react-icons/tb";
 import { TbBrandTailwind } from "react-icons/tb";
@@ -7,6 +7,7 @@ import { BiLogoMongodb } from "react-icons/bi";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { TbBrandThreejs } from "react-icons/tb";
 import { SiPython } from "react-icons/si";
+import { FaVectorSquare } from "react-icons/fa";
 
 const SkillLogo: React.FC<{ skill: string; logo: React.ReactNode }> = ({
   skill,
@@ -49,6 +50,10 @@ const Skills: React.FC = () => {
       logo: <TbBrandThreejs size={60} className="text-gray-300" />,
     },
     { name: "Python", logo: <SiPython size={60} className="text-blue-500" /> },
+    {
+      name: "Vector Database",
+      logo: <FaVectorSquare size={60} className="text-gray-950" />,
+    },
   ];
 
   return (
