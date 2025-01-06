@@ -12,7 +12,7 @@ const projects = [
       "A Hotel webApp for Tourist and Travellers to easily get Accomodation.",
     link: "https://hotel-dashboard-93cd9.web.app",
   },
-  // remember to add more projects
+  
 ];
 
 const Projects = () => {

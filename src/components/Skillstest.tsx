@@ -1,4 +1,4 @@
-import React from "react";
+import type React from "react";
 import SkillLogo from "./SkillLogo"; // Adjust the import path if needed
 import { Frame2, Frame3, Frame4 } from "../imgs";
 
